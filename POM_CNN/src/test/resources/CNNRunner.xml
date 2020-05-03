@@ -11,10 +11,11 @@
     <parameter name="browserVersion" value="75.0"/>
     <parameter name="url" value="https://cnn.com/"></parameter>
 
-    <test name = "NYP Home">
+    <test name = "CNN Home">
 
         <classes>
             <class name="testing.TestingHomepage" />
+            <class name="testing.TestingSearchPage" />
         </classes>
 
     </test>
