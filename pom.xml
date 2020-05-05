@@ -11,6 +11,8 @@
     <modules>
         <module>Generic</module>
         <module>POM_CNN</module>
+        <module>DataDriven_BestBuy</module>
+        <module>KeywordDriven_Facebook</module>
     </modules>
 
     <dependencyManagement>
