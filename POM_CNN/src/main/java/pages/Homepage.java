@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import reporting.TestLogger;
 
 public class Homepage extends CommonAPI
 {
@@ -65,5 +66,9 @@ public class Homepage extends CommonAPI
     public void verifyHomePageTitle()
     {
         System.out.println(driver.getTitle());
+    }
+    public void clickOnHealthPage()
+    {
+        he
     }
 }

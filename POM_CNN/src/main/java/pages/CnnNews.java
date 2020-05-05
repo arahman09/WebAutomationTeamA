@@ -1,4 +1,4 @@
-package pages.menu;
+package pages;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import reporting.TestLogger;
 
 public class CnnNews extends CommonAPI
 {
-    @FindBy(how = How.CSS, using = ".sc-fMiknA > div:nth-child(1) > a:nth-child(1) > svg:nth-child(1) > path:nth-child(2)")
+    @FindBy(how = How.CSS, using = ".sc-fMiknA > div:nth-child(1) > a:nth-child(1) > svg:nth-child(1) > rect")
     public static WebElement headLineNewsWebElement;
 
     public WebElement getHeadLineNewsWebElement()
@@ -24,7 +24,7 @@ public class CnnNews extends CommonAPI
         System.out.println(headLineNews);
         CommonAPI.waitUntilClickAble(headLineNewsWebElement);
         getHeadLineNewsWebElement().click();
-        }
+    }
 
 }
 
