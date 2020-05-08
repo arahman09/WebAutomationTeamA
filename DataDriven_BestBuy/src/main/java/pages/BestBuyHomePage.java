@@ -1,21 +1,42 @@
 package pages;
 
 import base.CommonAPI;
-import datasource.FetchTheSteps;
-import org.openqa.selenium.WebDriver;
+import datasource.FetchExternalData;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import reporting.TestLogger;
+import org.openqa.selenium.support.How;
 
 import java.io.IOException;
 
 public class BestBuyHomePage extends CommonAPI
 {
+    @FindBy(how = How.CSS, using = ".search-input")
+    public static WebElement searchWebElement;
 
-    public String[] excelData() throws IOException
+    public static WebElement getSearchWebElement()
     {
-        //TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        FetchTheSteps fetchTheSteps = new FetchTheSteps();
-        String [] string = fetchTheSteps.getDataFromExcelFileForFeaturesChoice();
-        return string;
+        return searchWebElement;
     }
+
+    public void clickOnSearchBox()
+    {
+        getSearchWebElement().click();
+    }
+
+    public void typeOnSearchBox(String value)
+    {
+        searchWebElement.sendKeys(value, Keys.ENTER);
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
