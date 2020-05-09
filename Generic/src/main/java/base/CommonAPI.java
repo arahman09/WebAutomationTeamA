@@ -581,4 +581,13 @@ public class CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
     }
 
+
+    public void disablePopUp()
+    {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-popup-blocking");
+        driver = new ChromeDriver(options);
+
+    }
+
 }
