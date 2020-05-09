@@ -16,7 +16,10 @@
         <classes>
             <!--<class name="testing.TestingHomepage" />-->
             <!--<class name="testing.TestingSearchPage" />-->
-            <class name="testing.TesingPoliticsPage" />
+<!--            <class name="testing.TesingPoliticsPage" />-->
+<!--            <class name="cnn.TestCnnNews" />-->
+            <class name="entertainment.TestEntertainmentPage"/>
+<!--            <class name="health.TestHealthPage"/>-->
         </classes>
 
     </test>

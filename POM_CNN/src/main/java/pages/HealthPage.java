@@ -17,8 +17,8 @@ public class HealthPage extends CnnNews {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(6) > a")
-    public static WebElement healthWebElement;
+    @FindBy(how = How.CSS, using = "/html/body/div[7]/section[1]/div[2]/div/div[1]/ul/li[1]/article/div/div[2]/h3/a/span[1]")
+    public static WebElement healthHeadLineWebElement;
     @FindBy(how = How.CSS, using = "div.sc-gisBJw:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a")
     public static WebElement foodWebElement;
     @FindBy(how = How.CSS, using = "div.sc-gisBJw:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a")
@@ -33,13 +33,14 @@ public class HealthPage extends CnnNews {
     public WebElement getHeadLineNewsWebElement() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
         {}.getClass().getEnclosingMethod().getName()));
-        return healthWebElement;
+        return healthHeadLineWebElement;
     }
 
-//    public void headLineNews()
-//    {
-//
-//    }
+    public void headLineNews()
+    {
+        getHeadLineNewsWebElement();
+        clickOnHeadLineNews();
+    }
 
     public void clickOnHeath()
     {

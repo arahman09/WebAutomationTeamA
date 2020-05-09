@@ -10,14 +10,14 @@ public class FetchTheSteps {
     ConnectToExcelFile excelFile = new ConnectToExcelFile();
     public String[] getDataFromExcelFile() throws IOException {
         //TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        String path = System.getProperty("user.dir")+"/Users/mohidulislam/Develop/HybridFramework/DataDriven_BestBuy/data/BestBuy_products.xlsx";
+        String path = System.getProperty("user.dir")+"/Volumes/D/Develop/WebAutomation_FrameWork/waterFallFramework/hybridFrameworkTeamA/DataDriven_BestBuy/data/BestBuy_products.xls";
         String [] data = excelFile.fileReader2(path,0);
         return data;
     }
 
     public String[] getDataFromExcelFileForFeaturesChoice() throws IOException{
         //TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        String path = System.getProperty("user.dir")+"/Users/mohidulislam/Develop/HybridFramework/DataDriven_BestBuy/data/BestBuy_products.xlsx";
+        String path = System.getProperty("user.dir")+"/Volumes/D/Develop/WebAutomation_FrameWork/waterFallFramework/hybridFrameworkTeamA/DataDriven_BestBuy/data/BestBuy_products.xls";
         String [] data = excelFile.fileReader2(path,0);
         return data;
     }

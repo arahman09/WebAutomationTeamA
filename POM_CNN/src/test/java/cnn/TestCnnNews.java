@@ -22,6 +22,7 @@ public class TestCnnNews extends CnnNews
     {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         pageFactory();
+        cnnNews.clickOnCnnTab();
         cnnNews.getHeadLineNewsWebElement();
         cnnNews.clickOnHeadLineNews();
     }
