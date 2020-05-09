@@ -27,6 +27,9 @@ public class SearchPage extends CommonAPI
     public static WebElement closePopUpWebElement;
 
 
+    @FindBy(how = How.CSS, using = ".c-modal-window.email-submission-modal.active")
+    public static WebElement windowWebElement;
+
 
     public static WebElement getSearchWebElement()
     {
@@ -53,40 +56,29 @@ public class SearchPage extends CommonAPI
         getSearchWebElement().clear();
     }
 
-    public void searchNSubmit()throws IOException
+    public void searchNSubmit()throws IOException,InterruptedException
     {
-        String[] items = getItems();
-        for(int i = 0; i < items.length; i++)
+        //String[] items = getItems();
+        sleepFor(5);
+        windowWebElement.click();
+        for(int i = 0; i < 3; i++)
         {
             clearSearchBox();
-            //disablePopUp();
-            typeOnSeachInputBox(items[i]);
-            if(popUpWebElement.isDisplayed())
-            {
-                searchWebElement.sendKeys(Keys.ESCAPE);
-            }
+            typeOnSeachInputBox("pen");
             clickOnSubmitButton();
+            sleepFor(1);
         }
 
     }
 
-
-
-    public String[] getItems()throws IOException
+    public static String[] getItems()throws IOException
     {
         String[] items = FetchExternalData.getDataFromExcelFile("/data/BestBuy_products.xls");
         return items;
     }
 
-    public void popHandling()
-    {
 
-        if(popUpWebElement.isDisplayed())
-        {
-            searchWebElement.sendKeys(Keys.ESCAPE);
-        }
 
-    }
 
 
 

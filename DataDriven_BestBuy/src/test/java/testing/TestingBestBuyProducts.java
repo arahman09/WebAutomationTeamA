@@ -11,7 +11,7 @@ import java.io.IOException;
 public class TestingBestBuyProducts extends CommonAPI
 {
     @Test
-    public void searchItems()throws IOException
+    public void searchItems()throws IOException,InterruptedException
     {
         SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
         searchPage.searchNSubmit();
