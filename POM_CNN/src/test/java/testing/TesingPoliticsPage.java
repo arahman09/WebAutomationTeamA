@@ -4,25 +4,25 @@ import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pages.Homepage;
-import pages.Search;
+import pages.Politics;
 
-public class TestingSearchPage extends CommonAPI
+public class TesingPoliticsPage extends CommonAPI
 {
-    Search search = null;
+    Politics politics = null;
     Homepage homepage = null;
 
     public void pageFactory()
     {
-        search = PageFactory.initElements(driver, Search.class);
+        politics = PageFactory.initElements(driver, Politics.class);
         homepage = PageFactory.initElements(driver,Homepage.class);
         testLogger();
     }
 
-    @Test (priority = 1)
-    public void verifySearchPage()
+    @Test
+    public void verifyPoliticsHeadLine()
     {
         pageFactory();
-        homepage.clickOnSearchBox();
-        search.typeOnSearchBox("politics");
+        homepage.clickOnPoliticsPage();
+        politics.clickOnHeadLineNews();
     }
 }

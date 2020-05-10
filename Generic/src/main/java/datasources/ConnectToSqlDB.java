@@ -21,7 +21,7 @@ public class ConnectToSqlDB {
 
     public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("/Users/mrahman/develop/pnt/WebAutomationDecember2019/Generic/secret.properties");
+        InputStream ism = new FileInputStream("/Users/mohidulislam/Develop/HybridFramework/Generic/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
@@ -39,17 +39,23 @@ public class ConnectToSqlDB {
         return connect;
     }
 
-    public List<String> readDataBase(String tableName, String columnName)throws Exception{
+    public List<String> readDataBase(String tableName, String columnName)throws Exception
+    {
         List<String> data = new ArrayList<String>();
 
-        try {
+        try
+        {
             connectToSqlDatabase();
             statement = connect.createStatement();
             resultSet = statement.executeQuery("select * from " + tableName);
             data = getResultSetData(resultSet, columnName);
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e)
+        {
             throw e;
-        }finally{
+        }
+        finally
+        {
             close();
         }
         return data;
@@ -204,7 +210,7 @@ public class ConnectToSqlDB {
         User user = null;
         try{
             Connection conn = connectToSqlDatabase();
-            String query = "SELECT * FROM Students";
+            String query = "SELECT * FROM Student";
             // create the java statement
             Statement st = conn.createStatement();
             // execute the query, and get a java resultset
@@ -228,10 +234,21 @@ public class ConnectToSqlDB {
         return list;
     }
 
-    public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
-        List<User> list = readUserProfileFromSqlTable();
-        for(User user:list){
-            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+    public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException, Exception {
+//        List<User> list = readUserProfileFromSqlTable();
+//        for(User user:list){
+//            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+//        }
+
+        ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+        List<String> str = connectToSqlDB.readDataBase("student", "stName");
+
+
+        for(String s : str)
+        {
+            System.out.println(s);
         }
+
+
     }
 }
