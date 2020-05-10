@@ -9,12 +9,12 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
-    <parameter name="url" value="https://bestbuy.com/"></parameter>
+    <parameter name="url" value="https://www.bestbuy.com/site/misc/financing-rewards/pcmcat102500050032.c?id=pcmcat102500050032"></parameter>
 
     <test name = "BestBuy Home">
 
         <classes>
-            <class name="testing.TestingBestBuyProducts" />
+            <class name="navigation.TestNavigation" />
         </classes>
 
     </test>

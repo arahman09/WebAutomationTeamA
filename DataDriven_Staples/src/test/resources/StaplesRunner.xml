@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name ="BestBuy Test Automation Script" parallel="false">
+<suite name ="Staples Test Automation Script" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -9,12 +9,12 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
-    <parameter name="url" value="https://bestbuy.com/"></parameter>
+    <parameter name="url" value="https://www.staples.com"></parameter>
 
-    <test name = "BestBuy Home">
+    <test name = "Staples Home">
 
         <classes>
-            <class name="testing.TestingBestBuyProducts" />
+            <class name="testing.TestSearch" />
         </classes>
 
     </test>
