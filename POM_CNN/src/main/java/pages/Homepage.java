@@ -26,44 +26,55 @@ public class Homepage extends CommonAPI
     @FindBy(how = How.CSS, using = ".indexes__LiveTVWrap-nujtvs-15 > a:nth-child(1) > span")
     public static WebElement liveTVWebElement;
 
+    @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(3) > a:nth-child(1)")
+    public static WebElement politicsWebElement;
 
-//    public Homepage()
-//    {
-//        PageFactory.initElements(driver, Homepage.class);
-//    }
 
     public void clickOnVideoMenu()
     {
+        testLogger();
         videosMenuBar.click();
     }
 
     public void clickOnSearchBox()
     {
+        testLogger();
         searchButton.click();
     }
 
     public void clickOnMenuBar()
     {
+        testLogger();
         menuBarWebElement.click();
     }
 
     public void clickOnSearchWeb()
     {
+        testLogger();
         searchWebElement.click();
     }
 
     public void clickOnUserIcon()
     {
+        testLogger();
         userIconWebElement.click();
     }
 
     public void clickOnLiveTV()
     {
+        testLogger();
         liveTVWebElement.click();
     }
 
     public void verifyHomePageTitle()
     {
+        testLogger();
         System.out.println(driver.getTitle());
+    }
+
+    public void clickOnPoliticsPage()
+    {
+        testLogger();
+        politicsWebElement.click();
     }
 }

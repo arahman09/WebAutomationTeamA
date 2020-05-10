@@ -20,6 +20,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
+import reporting.TestLogger;
 
 import java.io.File;
 import java.io.IOException;
@@ -274,7 +275,7 @@ public class CommonAPI {
         driver.findElement(By.id(locator)).clear();
     }
 
-    public void navigateBack() {
+    public static void navigateBack() {
         driver.navigate().back();
     }
 
@@ -572,6 +573,12 @@ public class CommonAPI {
         } catch (Exception ex3) {
             System.out.println("CSS locator didn't work");
         }
+    }
+
+
+    public void testLogger()
+    {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
     }
 
 }
