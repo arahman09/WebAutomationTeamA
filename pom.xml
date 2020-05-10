@@ -13,6 +13,7 @@
         <module>POM_CNN</module>
         <module>DataDriven_BestBuy</module>
         <module>KeywordDriven_Facebook</module>
+        <module>Microsoft</module>
     </modules>
 
     <dependencyManagement>
