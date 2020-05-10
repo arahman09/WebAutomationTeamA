@@ -6,9 +6,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.seleniumhq.jetty9.util.IO;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class StaplesSearchPage extends CommonAPI
@@ -44,13 +44,41 @@ public class StaplesSearchPage extends CommonAPI
         getSearchSubmitButtonWebElement().click();
     }
 
+//    public void searchNSubmit()throws IOException,InterruptedException
+//    {
+//
+//        String[] items = null;
+//
+//        try{
+//            items = excelData();
+//        }
+//        catch (Exception e)
+//        {
+//            System.out.println(e);
+//        }
+//
+//        for(String str : items)
+//        {
+//            clearSearchInputBox();
+//            typeInSearchInputBox(str);
+//            clearSearchInputBox();
+//            sleepFor(3);
+//        }
+//    }
+
+    public String[] excelData() throws IOException
+    {
+        String[] items  = FetchExternalData.getDataFromExcelFile("/data/staples_products.xls");
+        return items;
+    }
+
     public void searchNSubmit()throws IOException,InterruptedException
     {
 
-        String[] items = null;
+        List<String> items = null;
 
         try{
-            items = getItems();
+            items = sqlData();
         }
         catch (Exception e)
         {
@@ -66,16 +94,11 @@ public class StaplesSearchPage extends CommonAPI
         }
     }
 
-    public String[] getItems() throws IOException
-    {
-        FetchExternalData externalDataSource = new FetchExternalData();
-        String[] items  = externalDataSource.getDataFromExcelFile("/data/staples_products.xls");
-        return items;
-    }
 
-    public String[] excelData() throws IOException
+
+    public static List<String> sqlData() throws Exception
     {
-        String[] data = getItems();
+        List<String> data = FetchExternalData.getDataFromDatabase();
         return data;
     }
 }

@@ -1,14 +1,10 @@
 package pages;
 
 import base.CommonAPI;
-import datasource.FetchExternalData;
-import org.openqa.selenium.Keys;
+import datasource.DataSource;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.seleniumhq.jetty9.util.IO;
 
 import java.io.IOException;
 
@@ -73,7 +69,7 @@ public class SearchPage extends CommonAPI
 
     public static String[] getItems()throws IOException
     {
-        String[] items = FetchExternalData.getDataFromExcelFile("/data/BestBuy_products.xls");
+        String[] items = DataSource.getDataFromExcelFile("/data/BestBuy_products.xls");
         return items;
     }
 

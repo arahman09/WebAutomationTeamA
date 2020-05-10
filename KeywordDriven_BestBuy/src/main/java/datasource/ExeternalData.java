@@ -1,12 +1,11 @@
 package datasource;
 
 import datasources.ConnectToExcelFile;
-import datasources.ConnectToSqlDB;
 
 import java.io.IOException;
-import java.util.List;
 
-public class FetchExternalData {
+public class ExeternalData
+{
 
     public static String[] getDataFromExcelFile(String givenPath)throws IOException
     {
@@ -16,6 +15,12 @@ public class FetchExternalData {
         dataSource = connectToExcelFile.fileReader2(path,0);
         return dataSource;
     }
+
+
+
+
+
+
 
 //    public static List<String> getDataFromDatabase()throws Exception
 //    {
