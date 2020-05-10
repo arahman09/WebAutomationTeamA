@@ -4,18 +4,15 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import reporting.TestLogger;
 
-public class Homepage extends CommonAPI
-{
+public class Homepage extends CommonAPI{
+
     @FindBy(how = How.LINK_TEXT, using = "videos")
     public static WebElement videosMenuBar;
 
     @FindBy(how = How.CSS, using = "button.sc-jDwBTQ:nth-child(2) > svg:nth-child(1)")
     public static WebElement searchButton;
-
-    @FindBy(how = How.CSS, using = ".menu-icon")
-    public static WebElement menuBarWebElement;
 
     @FindBy(how = How.CSS, using = "button.sc-jDwBTQ:nth-child(2) > svg")
     public static WebElement searchWebElement;
@@ -29,6 +26,10 @@ public class Homepage extends CommonAPI
     @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(3) > a:nth-child(1)")
     public static WebElement politicsWebElement;
 
+    @FindBy (how = How.CSS, using = "")
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"header-nav-container\"]/div/div[1]/div/div[2]/nav/ul/li[4]/a")
+    public static WebElement healthWebElement;
 
     public void clickOnVideoMenu()
     {
@@ -42,11 +43,11 @@ public class Homepage extends CommonAPI
         searchButton.click();
     }
 
-    public void clickOnMenuBar()
-    {
-        testLogger();
-        menuBarWebElement.click();
-    }
+//    public void clickOnMenuBar()
+//    {
+//        testLogger();
+//        menuBarWebElement.click();
+//    }
 
     public void clickOnSearchWeb()
     {
@@ -76,5 +77,16 @@ public class Homepage extends CommonAPI
     {
         testLogger();
         politicsWebElement.click();
+    }
+//    public void clickOnEntertainmentTab()
+//    {
+//        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+//        entertainmentWebElement.click();
+//    }
+
+    public void clickOnHealthTab()
+    {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        healthWebElement.click();
     }
 }

@@ -275,7 +275,7 @@ public class CommonAPI {
         driver.findElement(By.id(locator)).clear();
     }
 
-    public void navigateBack() {
+    public static void navigateBack() {
         driver.navigate().back();
     }
 
@@ -579,15 +579,6 @@ public class CommonAPI {
     public void testLogger()
     {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-    }
-
-
-    public void disablePopUp()
-    {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-popup-blocking");
-        driver = new ChromeDriver(options);
-
     }
 
 }

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import pages.CnnNews;
 import reporting.TestLogger;
 
-public class HealthPage extends CnnNews {
+public class HealthPage extends CommonAPI {
   //  private final WebDriver driver;
 
     public HealthPage(WebDriver driver) {
@@ -70,4 +70,5 @@ public class HealthPage extends CnnNews {
     {
         vitalSignsWebElement.click();
     }
+
 }

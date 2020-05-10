@@ -1,14 +1,10 @@
 package pages;
 
 import base.CommonAPI;
-import datasource.FetchExternalData;
-import org.openqa.selenium.Keys;
+import datasource.DataSource;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.seleniumhq.jetty9.util.IO;
 
 import java.io.IOException;
 
@@ -26,6 +22,9 @@ public class SearchPage extends CommonAPI
     @FindBy(how = How.CSS, using = ".c-close-icon")
     public static WebElement closePopUpWebElement;
 
+
+    @FindBy(how = How.CSS, using = ".c-modal-window.email-submission-modal.active")
+    public static WebElement windowWebElement;
 
 
     public static WebElement getSearchWebElement()
@@ -53,40 +52,29 @@ public class SearchPage extends CommonAPI
         getSearchWebElement().clear();
     }
 
-    public void searchNSubmit()throws IOException
+    public void searchNSubmit()throws IOException,InterruptedException
     {
-        String[] items = getItems();
-        for(int i = 0; i < items.length; i++)
+        //String[] items = getItems();
+        sleepFor(5);
+        windowWebElement.click();
+        for(int i = 0; i < 3; i++)
         {
             clearSearchBox();
-            //disablePopUp();
-            typeOnSeachInputBox(items[i]);
-            if(popUpWebElement.isDisplayed())
-            {
-                searchWebElement.sendKeys(Keys.ESCAPE);
-            }
+            typeOnSeachInputBox("pen");
             clickOnSubmitButton();
+            sleepFor(1);
         }
 
     }
 
-
-
-    public String[] getItems()throws IOException
+    public static String[] getItems()throws IOException
     {
-        String[] items = FetchExternalData.getDataFromExcelFile("/data/BestBuy_products.xls");
+        String[] items = DataSource.getDataFromExcelFile("/data/BestBuy_products.xls");
         return items;
     }
 
-    public void popHandling()
-    {
 
-        if(popUpWebElement.isDisplayed())
-        {
-            searchWebElement.sendKeys(Keys.ESCAPE);
-        }
 
-    }
 
 
 

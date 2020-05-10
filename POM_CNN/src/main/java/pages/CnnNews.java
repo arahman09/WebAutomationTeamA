@@ -6,25 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import reporting.TestLogger;
 
-public class CnnNews extends CommonAPI
-{
+public class CnnNews extends Homepage {
+
     @FindBy(how = How.CSS, using = ".sc-fMiknA > div:nth-child(1) > a")
     public static WebElement cnnNewsWebElement;
-    @FindBy(how = How.XPATH, using = "/html/body/div[7]/section[2]/div[2]/div/div[1]/ul/li[1]/article/a/h2")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"homepage1-zone-1\"]/div[2]/div/div[1]/ul/li[1]/article/a/h2")
     public static WebElement cnnHeadLineNewsWebElement;
-    @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(7) > a")
-    public static WebElement entertainmentWebElement;
-    @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(6) > a")
-    public static WebElement healthWebElement;
 
-
-    public WebElement getHeadLineNewsWebElement()
-    {
+    public WebElement getHeadLineNewsWebElement() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return cnnHeadLineNewsWebElement;
     }
-    public void clickOnHeadLineNews()
-    {
+
+    public void clickOnHeadLineNews() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         CommonAPI.waitUntilVisible(cnnHeadLineNewsWebElement);
         String headLineNews = getHeadLineNewsWebElement().getText();
@@ -32,23 +26,10 @@ public class CnnNews extends CommonAPI
         CommonAPI.waitUntilClickAble(cnnHeadLineNewsWebElement);
         getHeadLineNewsWebElement().click();
     }
-    public void clickOnCnnTab()
-    {
+
+    public void clickOnCnnTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         cnnNewsWebElement.click();
     }
-
-    public void clickOnEntertainmentTab()
-    {
-        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        entertainmentWebElement.click();
-    }
-
-    public void clickOnHealthTab()
-    {
-        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        healthWebElement.click();
-    }
-
 }
 
