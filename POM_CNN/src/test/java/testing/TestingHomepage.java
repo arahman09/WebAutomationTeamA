@@ -11,6 +11,7 @@ public class TestingHomepage extends CommonAPI
 
     public void pageFactory()
     {
+        testLogger();
         homepage = PageFactory.initElements(driver, Homepage.class);
     }
 
