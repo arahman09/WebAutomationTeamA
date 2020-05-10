@@ -29,6 +29,12 @@ public class Homepage extends CommonAPI
     @FindBy(how = How.CSS, using = "li.dMglaH:nth-child(3) > a:nth-child(1)")
     public static WebElement politicsWebElement;
 
+    @FindBy(how = How.NAME, using = "travel")
+    public static WebElement travelWebElement;
+
+    @FindBy(how = How.NAME, using = "bleacher")
+    public static WebElement sportsWebElement;
+
 
     public void clickOnVideoMenu()
     {
@@ -77,4 +83,20 @@ public class Homepage extends CommonAPI
         testLogger();
         politicsWebElement.click();
     }
+
+    public TravelPage clickOnTravelPage()
+    {
+        testLogger();
+        travelWebElement.click();
+        return new TravelPage();
+    }
+
+    public SportsPage clickOnSportsPage()
+    {
+        testLogger();
+        sportsWebElement.click();
+        return new SportsPage();
+
+    }
 }
+
