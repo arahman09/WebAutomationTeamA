@@ -241,7 +241,7 @@ public class ConnectToSqlDB {
 //        }
 
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        List<String> str = connectToSqlDB.readDataBase("student", "stName");
+        List<String> str = connectToSqlDB.readDataBase("staples_data", "products");
 
 
         for(String s : str)
