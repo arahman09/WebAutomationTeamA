@@ -14,7 +14,9 @@
     <test name = "Microsoft Home">
 
         <classes>
-            <class name="HomePage.TestHomePage" />
+<!--            <class name="test.TestHomePage" />-->
+            <class name="navigation.TestNavigation"/>
+<!--            <class name="test.TestSearchPage"/>-->
         </classes>
 
     </test>

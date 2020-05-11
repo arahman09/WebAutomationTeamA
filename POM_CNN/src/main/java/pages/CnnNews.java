@@ -29,7 +29,7 @@ public class CnnNews extends Homepage {
 
     public void clickOnCnnTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        cnnNewsWebElement.click();
+        getCnnNewsWebElement().click();
     }
 }
 

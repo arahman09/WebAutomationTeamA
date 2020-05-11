@@ -7,8 +7,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class FetchExternalData
-{
+public class FetchExternalData {
 
     public static String[] getDataFromExcelFile(String givenPath)throws IOException
     {
@@ -19,9 +18,6 @@ public class FetchExternalData
         return dataSource;
     }
 
-
-
-
     public static List<String> getDataFromDatabase()throws Exception
     {
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
@@ -29,24 +25,4 @@ public class FetchExternalData
 
         return list;
     }
-
-
-
-//    public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException, Exception {
-//
-//        List<String> str = getDataFromDatabase();
-//
-//
-//
-//        for(String s : str)
-//        {
-//            System.out.println(s);
-//        }
-//
-//
-//    }
-
-
-
-
 }

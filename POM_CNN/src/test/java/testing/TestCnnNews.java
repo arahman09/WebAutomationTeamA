@@ -7,17 +7,26 @@ import pages.Homepage;
 import pages.CnnNews;
 import reporting.TestLogger;
 
-public class TestCnnNews extends CommonAPI
-{
+public class TestCnnNews extends CommonAPI {
+
     CnnNews cnnNews = null;
     Homepage homepage =null;
 
-    @Test(priority = 1)
+    @Test (priority = 1)
+    public void verifyCnnPage() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass()
+                .getEnclosingMethod().getName()));
+        homepage =PageFactory.initElements(driver,Homepage.class);
+        cnnNews = PageFactory.initElements(driver, CnnNews.class);
+        cnnNews.getCnnNewsWebElement();
+        cnnNews.clickOnCnnTab();
+    }
+    @Test(priority = 2)
     public void verifyCnnHeadLineNews() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass()
                 .getEnclosingMethod().getName()));
+        homepage =PageFactory.initElements(driver,Homepage.class);
         cnnNews = PageFactory.initElements(driver, CnnNews.class);
-       // homepage =PageFactory.initElements(driver,Homepage.class);
         cnnNews.clickOnCnnTab();
         cnnNews.getHeadLineNewsWebElement();
         cnnNews.clickOnHeadLineNews();

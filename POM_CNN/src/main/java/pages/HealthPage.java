@@ -2,22 +2,14 @@ package pages;
 
 
 import base.CommonAPI;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import pages.CnnNews;
 import reporting.TestLogger;
 
-public class HealthPage extends CommonAPI {
-  //  private final WebDriver driver;
+public class HealthPage extends Homepage {
 
-    public HealthPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-    @FindBy(how = How.CSS, using = "/html/body/div[7]/section[1]/div[2]/div/div[1]/ul/li[1]/article/div/div[2]/h3/a/span[1]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"health-zone-1\"]/div[2]/div/div[1]/ul/li[1]/article/div/div[2]/h3/a/span[1]")
     public static WebElement healthHeadLineWebElement;
     @FindBy(how = How.CSS, using = "div.sc-gisBJw:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a")
     public static WebElement foodWebElement;
@@ -29,46 +21,90 @@ public class HealthPage extends CommonAPI {
     public static WebElement parentingWebElement;
     @FindBy(how = How.CSS, using = "div.sc-gisBJw:nth-child(2) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(5) > a")
     public static WebElement vitalSignsWebElement;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"health-zone-2\"]/div[6]/div/div[2]/ul/a/h2")
+    public static WebElement scienceAndHealthWebElement;
 
     public WebElement getHeadLineNewsWebElement() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
         {}.getClass().getEnclosingMethod().getName()));
         return healthHeadLineWebElement;
     }
-
-    public void headLineNews()
-    {
-        getHeadLineNewsWebElement();
-        clickOnHeadLineNews();
+    public void clickOnHeadLineNews() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        CommonAPI.waitUntilVisible(healthHeadLineWebElement);
+        String headLineNews = getHeadLineNewsWebElement().getText();
+        System.out.println(headLineNews);
+        CommonAPI.waitUntilClickAble(healthHeadLineWebElement);
+        getHeadLineNewsWebElement().click();
     }
 
-    public void clickOnHeath()
-    {
-        healthWebElement.click();
-    }
-    public void clickOnFood ()
-    {
-        foodWebElement.click();
+    public WebElement getFoodWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return foodWebElement;
     }
 
-    public void clickOnFitness()
-    {
-        fitnessWebElement.click();
+    public WebElement getFitnessWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return fitnessWebElement;
     }
 
-    public void clickWellness()
-    {
-        wellnessWebElement.click();
+    public WebElement getWellnessWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return wellnessWebElement;
     }
 
-    public void clickOnPareting()
-    {
-       parentingWebElement.click();
+    public WebElement getParentingWebElement() {
+
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return parentingWebElement;
     }
 
-    public void clickOnVitalSigns()
-    {
-        vitalSignsWebElement.click();
+    public WebElement getVitalSignsWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return vitalSignsWebElement;
+    }
+
+    public WebElement getScienceAndHealthWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        return scienceAndHealthWebElement;
+    }
+    public void clickOnFoodTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getFoodWebElement().click();
+    }
+    public void clickOnFitnessTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getFitnessWebElement().click();
+    }
+    public void clickWellnessTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getWellnessWebElement().click();
+    }
+    public void clickOnParentingTab() {
+
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getParentingWebElement().click();
+    }
+    public void clickOnVitalSignsTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getVitalSignsWebElement().click();
+    }
+    public void clickOnScienceAndHeathTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        getScienceAndHealthWebElement().click();
     }
 
 }

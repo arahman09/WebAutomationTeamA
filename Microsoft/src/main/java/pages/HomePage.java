@@ -23,7 +23,7 @@ public class HomePage extends CommonAPI {
     public static WebElement xboxWebElement;
     @FindBy(how = How.CSS, using = "#shellmenu_5")
     public static WebElement dealsWebElement;
-    @FindBy(how = How.XPATH, using = "//a[@id='l1_support']")
+    @FindBy(how = How.CSS, using = "#l1_support")
     public static WebElement supportWebElement;
     @FindBy(how = How.XPATH, using = "//*[@id=\"uhf-c-nav\"]/ul/li/div/button/span")
     public WebElement allMicrosoftWebElement;
@@ -114,7 +114,7 @@ public class HomePage extends CommonAPI {
         }.getClass().getEnclosingMethod().getName()));
         getXboxWebElement().click();
     }
-    public void clickOnDeal() {
+    public void clickOnDeals() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
         getDealsWebElement();
@@ -144,5 +144,4 @@ public class HomePage extends CommonAPI {
         }.getClass().getEnclosingMethod().getName()));
         getSignInWebElement().click();
     }
-
 }

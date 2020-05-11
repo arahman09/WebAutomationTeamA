@@ -1,4 +1,4 @@
-package HomePage;
+package test;
 
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
@@ -46,10 +46,10 @@ public class TestHomePage extends CommonAPI {
         homePage.clickOnXbox();
     }
     @Test(priority = 7)
-    public void dealTab() {
+    public void dealTab() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
-        homePage.clickOnDeal();
+        homePage.clickOnDeals();
     }
     @Test (priority =8)
     public void supportTab() {
