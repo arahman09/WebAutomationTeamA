@@ -16,7 +16,7 @@
         <classes>
             <!--<class name="testing.TestingHomepage" />-->
             <!--<class name="testing.TestingSearchPage" />-->
-            <class name="testing.TestingHomepage" />
+            <class name="testing.TesingPoliticsPage" />
         </classes>
 
     </test>
