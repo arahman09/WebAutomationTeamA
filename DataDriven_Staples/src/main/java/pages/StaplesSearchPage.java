@@ -49,7 +49,8 @@ public class StaplesSearchPage extends CommonAPI
 //
 //        String[] items = null;
 //
-//        try{
+//        try
+//        {
 //            items = excelData();
 //        }
 //        catch (Exception e)
@@ -77,7 +78,8 @@ public class StaplesSearchPage extends CommonAPI
 
         List<String> items = null;
 
-        try{
+        try
+        {
             items = sqlData();
         }
         catch (Exception e)
@@ -93,7 +95,6 @@ public class StaplesSearchPage extends CommonAPI
             sleepFor(3);
         }
     }
-
 
 
     public static List<String> sqlData() throws Exception
