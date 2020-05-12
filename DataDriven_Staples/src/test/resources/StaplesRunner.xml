@@ -16,7 +16,8 @@
         <classes>
             <!--<class name="testing.TestingStaplesHomePage" />-->
             <!--<class name="testing.TestingReorderMenu" />-->
-            <class name="testing.TestingProductsTab" />
+            <!--<class name="testing.TestingProductsTab" />-->
+            <class name="testing.TestingStaplesSearchPage" />
         </classes>
 
     </test>
