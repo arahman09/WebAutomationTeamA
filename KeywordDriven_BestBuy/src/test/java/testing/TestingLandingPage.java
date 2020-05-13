@@ -1,15 +1,12 @@
-package navigation;
+package testing;
 
-import NavigateTheTabs.NavigateTheTabs;
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pages.LandingPage;
 import reporting.TestLogger;
 
-import java.io.IOException;
-
-public class TestNavigation extends CommonAPI
+public class TestingLandingPage extends CommonAPI
 {
     LandingPage landingPage = null;
 
@@ -17,13 +14,6 @@ public class TestNavigation extends CommonAPI
     {
         landingPage = PageFactory.initElements(driver, LandingPage.class);
     }
-
-//    @Test
-//    public void navigateTabs() throws IOException,InterruptedException
-//    {
-//         NavigateTheTabs navigateTheTabs = PageFactory.initElements(driver, NavigateTheTabs.class);
-//         navigateTheTabs.navigateKeyBars(driver);
-//    }
 
     @Test
     public void verifyProductsTab()
