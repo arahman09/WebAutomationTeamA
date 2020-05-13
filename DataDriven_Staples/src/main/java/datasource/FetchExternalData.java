@@ -7,8 +7,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class FetchExternalData
-{
+public class FetchExternalData {
 
     public static String[] getDataFromExcelFile(String givenPath)throws IOException
     {
@@ -26,6 +25,4 @@ public class FetchExternalData
 
         return list;
     }
-
-
 }

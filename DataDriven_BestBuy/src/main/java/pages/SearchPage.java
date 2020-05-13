@@ -26,7 +26,6 @@ public class SearchPage extends CommonAPI
     @FindBy(how = How.CSS, using = ".c-modal-window.email-submission-modal.active")
     public static WebElement windowWebElement;
 
-
     public static WebElement getSearchWebElement()
     {
         return searchWebElement;
@@ -37,7 +36,7 @@ public class SearchPage extends CommonAPI
         return searchSubmitButtonWebElement;
     }
 
-    public static void typeOnSeachInputBox(String value)
+    public static void typeOnSearchInputBox(String value)
     {
         getSearchWebElement().sendKeys(value);
     }
@@ -60,7 +59,7 @@ public class SearchPage extends CommonAPI
         for(int i = 0; i < 3; i++)
         {
             clearSearchBox();
-            typeOnSeachInputBox("pen");
+            typeOnSearchInputBox("pen");
             clickOnSubmitButton();
             sleepFor(1);
         }
