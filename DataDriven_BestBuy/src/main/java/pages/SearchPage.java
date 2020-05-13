@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class SearchPage extends CommonAPI
 {
-    @FindBy(how = How.CSS, using = ".search-input")
-    public static WebElement searchWebElement;
+    @FindBy(how = How.CSS, using = "#gh-search-input")
+    public static WebElement searchBarWebElement;
 
     @FindBy(how = How.CSS, using = ".header-search-button")
     public static WebElement searchSubmitButtonWebElement;
@@ -27,19 +27,14 @@ public class SearchPage extends CommonAPI
     public static WebElement windowWebElement;
 
 
-    public static WebElement getSearchWebElement()
+    public static WebElement getSearchBarWebElement()
     {
-        return searchWebElement;
+        return searchBarWebElement;
     }
 
     public static WebElement getSearchSubmitButtonWebElement()
     {
         return searchSubmitButtonWebElement;
-    }
-
-    public static void typeOnSeachInputBox(String value)
-    {
-        getSearchWebElement().sendKeys(value);
     }
 
     public static void clickOnSubmitButton()
@@ -49,27 +44,32 @@ public class SearchPage extends CommonAPI
 
     public void clearSearchBox()
     {
-        getSearchWebElement().clear();
+        getSearchBarWebElement().clear();
+    }
+
+    public static void typeOnSeachInputBox(String items)
+    {
+        getSearchBarWebElement().sendKeys(items);
     }
 
     public void searchNSubmit()throws IOException,InterruptedException
     {
-        //String[] items = getItems();
-        sleepFor(5);
-        windowWebElement.click();
-        for(int i = 0; i < 3; i++)
+        //windowWebElement.click();
+        String[] items = getItems();
+        for(int i = 1; i < items.length; i++)
         {
-            clearSearchBox();
-            typeOnSeachInputBox("pen");
+            getSearchBarWebElement().click();
+            typeOnSeachInputBox(items[i]);
             clickOnSubmitButton();
-            sleepFor(1);
+            sleepFor(2);
+            clearSearchBox();
         }
 
     }
 
     public static String[] getItems()throws IOException
     {
-        String[] items = DataSource.getDataFromExcelFile("/data/BestBuy_products.xls");
+        String[] items = DataSource.getDataFromExcelFile("/data/Evan_Data_BestBuy.xls");
         return items;
     }
 

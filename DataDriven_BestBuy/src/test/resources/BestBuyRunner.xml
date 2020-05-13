@@ -9,7 +9,7 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
-    <parameter name="url" value="https://bestbuy.com/"></parameter>
+    <parameter name="url" value="https://www.bestbuy.com/site/electronics/video-games/abcat0700000.c?id=abcat0700000"></parameter>
 
     <test name = "BestBuy Home">
 
