@@ -20,19 +20,19 @@ public class TestingSportsPage extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void verifyCopyRightText(){
         pageFactoryNTestLogger();
         String text = sportsPage.getCopyRightText();
         System.out.println(text);
     }
-   // @Test
+   @Test
     public void verifyBackToHomePageButton() throws InterruptedException {
         pageFactoryNTestLogger();
         sleepFor(2);
         sportsPage.clickOnBackToHomePage();
     }
-   /*@Test
+   @Test
     public void verifyNflLink()throws InterruptedException {
         pageFactoryNTestLogger();
        sleepFor(2);
@@ -74,7 +74,7 @@ public class TestingSportsPage extends CommonAPI {
         sleepFor(2);
         sportsPage.clickOnNflMenuBuffaloLinkTopBar();
     }
-   /* @Test
+   /*@Test
     public void verify() {
         pageFactoryNTestLogger();
     }
