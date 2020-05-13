@@ -26,7 +26,6 @@ public class SearchPage extends CommonAPI
     @FindBy(how = How.CSS, using = ".c-modal-window.email-submission-modal.active")
     public static WebElement windowWebElement;
 
-
     public static WebElement getSearchWebElement()
     {
         return searchWebElement;

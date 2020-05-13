@@ -12,9 +12,9 @@ import java.util.Set;
 public class ServicesAndSolutionsPage extends StaplesHomePage {
 
     public void goBackToHomeTab() throws InterruptedException {
-//        WebElement tabbedButton = driver.findElement(By.linkText("Printing Services"));
-//        tabbedButton.click();
-//        sleepFor(3);
+        WebElement tabbedButton = driver.findElement(By.linkText("Printing Services"));
+        tabbedButton.click();
+        sleepFor(3);
         Set<String> windowId = Collections.singleton(driver.getWindowHandle());
         Iterator<String> iterator = windowId.iterator();
         String parentTab = iterator.next();
@@ -34,7 +34,6 @@ public class ServicesAndSolutionsPage extends StaplesHomePage {
             String[] data = excelData();
 
 //        String[] str = {"Business Services", "Tech Services", "Sustainability Services", "Office Services","Furniture Services", "Staple Corporate Solutions"};
-//
 //            for (String s : str) {
 //                driver.findElement(By.linkText(s)).click();
 //                //navigateBack();

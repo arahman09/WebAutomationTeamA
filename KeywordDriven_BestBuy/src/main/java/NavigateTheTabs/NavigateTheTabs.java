@@ -1,7 +1,7 @@
 package NavigateTheTabs;
 
 import base.CommonAPI;
-import datasource.ExeternalData;
+import datasource.ExternalData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pages.LandingPage;
@@ -96,7 +96,7 @@ public class NavigateTheTabs
 
         try
         {
-            tabList = ExeternalData.getDataFromExcelFile("/data/best-buy-file.xls");
+            tabList = ExternalData.getDataFromExcelFile("/data/best-buy-file.xls");
         }
         catch(Exception e)
         {
