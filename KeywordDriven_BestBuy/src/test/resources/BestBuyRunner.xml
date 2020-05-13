@@ -14,7 +14,10 @@
     <test name = "BestBuy Home">
 
         <classes>
-            <class name="navigation.TestNavigation" />
+            <!--<class name="testing.TestingLandingPage" />-->
+            <!--            <class name="testing.TestingProductsTab" />-->
+<!--            <class name="testing.TestBrandsPage"/>-->
+            <class name="navigation.TestBrandsPageNavigation"/>
         </classes>
 
     </test>

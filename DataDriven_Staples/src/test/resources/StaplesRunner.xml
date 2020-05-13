@@ -14,7 +14,9 @@
     <test name = "Staples Home">
 
         <classes>
-            <class name="testing.TestSearch" />
+<!--            <class name="testing.TestSearch" />-->
+<!--            <class name="testing.ServicesAndSolutionsTest"/>-->
+            <class name="testing.StaplesHomePageTest"/>
         </classes>
 
     </test>

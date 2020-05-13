@@ -8,10 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * Created by mrahman on 04/02/18.
- */
-
 public class ConnectToSqlDB {
 
     public static Connection connect = null;
@@ -21,7 +17,7 @@ public class ConnectToSqlDB {
 
     public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("/Users/mohidulislam/Develop/HybridFramework/Generic/secret.properties");
+        InputStream ism = new FileInputStream("/Volumes/D/Develop/WebAutomation_FrameWork/waterFallFramework/hybridFrameworkTeamA/Generic/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
@@ -241,7 +237,7 @@ public class ConnectToSqlDB {
 //        }
 
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        List<String> str = connectToSqlDB.readDataBase("student", "stName");
+        List<String> str = connectToSqlDB.readDataBase("staples_data", "products");
 
 
         for(String s : str)

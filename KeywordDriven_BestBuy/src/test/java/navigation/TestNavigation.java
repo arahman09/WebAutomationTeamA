@@ -4,15 +4,26 @@ import NavigateTheTabs.NavigateTheTabs;
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+import pages.LandingPage;
+import reporting.TestLogger;
 
 import java.io.IOException;
 
 public class TestNavigation extends CommonAPI
 {
-    @Test
-    public void navigateTabs() throws IOException,InterruptedException
+    LandingPage landingPage = null;
+
+    public void pageFactory()
     {
-         NavigateTheTabs navigateTheTabs = PageFactory.initElements(driver, NavigateTheTabs.class);
-         navigateTheTabs.navigateKeyBars(driver);
+        landingPage = PageFactory.initElements(driver, LandingPage.class);
     }
+
+    @Test
+    public void verifyProductsTab()
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        landingPage.clickOnProductsTab();
+    }
+
 }

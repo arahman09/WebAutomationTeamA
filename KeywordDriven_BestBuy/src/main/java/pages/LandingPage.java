@@ -24,6 +24,9 @@ public class LandingPage
     @FindBy(how = How.CSS, using = ".top-nav-items li:nth-child(6)")
     public static WebElement forYourBusinessWebElement;
 
+    @FindBy(how = How.CSS, using = ".global-navigation li:nth-child(1)")
+    public static WebElement productsTabWebElement;
+
 
     public static WebElement getCreditCardWebElement()
     {
@@ -55,6 +58,11 @@ public class LandingPage
         return forYourBusinessWebElement;
     }
 
+    public static WebElement getProductsTabWebElement()
+    {
+        return productsTabWebElement;
+    }
+
 
     public void clickOnCreditCards()
     {
@@ -84,6 +92,11 @@ public class LandingPage
     public void clickOnForYourBusiness()
     {
         getForYourBusinessWebElement().click();
+    }
+
+    public void clickOnProductsTab()
+    {
+        getProductsTabWebElement().click();
     }
 
 
