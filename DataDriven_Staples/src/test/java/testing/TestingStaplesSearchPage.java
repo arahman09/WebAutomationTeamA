@@ -77,6 +77,158 @@ public class TestingStaplesSearchPage extends CommonAPI
         searchPage.clickOnBuyOnlineNPickUp();;
         sleepFor(4);
     }
+
+    @Test (priority = 6)
+    public void verifyNextDayEligibleFilterForItem2() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("fountain pen");
+        sleepFor(3);
+        searchPage.clickOnNextDayEligibleFilter();
+        sleepFor(4);
+    }
+
+    @Test (priority = 7)
+    public void verifySetLocationForItem2() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("fountain pen");
+        sleepFor(3);
+        searchPage.clickOnSetStore();;
+        sleepFor(4);
+        searchPage.inputStoreLocationNSubmit("New Jersey");
+        sleepFor(4);
+    }
+
+    @Test (priority = 8)
+    public void verifyBuyOnlineNPickUpForItem2() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("fountain pen");
+        sleepFor(3);
+        searchPage.clickOnBuyOnlineNPickUp();;
+        sleepFor(4);
+    }
+
+    @Test (priority = 9)
+    public void verifyNextDayEligibleFilterForItem3() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("index cards");
+        sleepFor(3);
+        searchPage.clickOnNextDayEligibleFilter();
+        sleepFor(4);
+    }
+
+    @Test (priority = 10)
+    public void verifySetLocationForItem3() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("index cards");
+        sleepFor(3);
+        searchPage.clickOnSetStore();;
+        sleepFor(4);
+        searchPage.inputStoreLocationNSubmit("California");
+        sleepFor(4);
+    }
+
+    @Test (priority = 11)
+    public void verifyBuyOnlineNPickUpForItem3() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("index cards");
+        sleepFor(3);
+        searchPage.clickOnBuyOnlineNPickUp();;
+        sleepFor(4);
+    }
+
+    @Test (priority = 12)
+    public void verifyNextDayEligibleFilterForItem4() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("markers");
+        sleepFor(3);
+        searchPage.clickOnNextDayEligibleFilter();
+        sleepFor(4);
+    }
+
+    @Test (priority = 13)
+    public void verifySetLocationForItem4() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("markers");
+        sleepFor(3);
+        searchPage.clickOnSetStore();;
+        sleepFor(4);
+        searchPage.inputStoreLocationNSubmit("Texas");
+        sleepFor(4);
+    }
+
+    @Test (priority = 14)
+    public void verifyBuyOnlineNPickUpForItem4() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("markers");
+        sleepFor(3);
+        searchPage.clickOnBuyOnlineNPickUp();;
+        sleepFor(4);
+    }
+
+    @Test (priority = 15)
+    public void verifyNextDayEligibleFilterForItem5() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("calculators");
+        sleepFor(3);
+        searchPage.clickOnNextDayEligibleFilter();
+        sleepFor(4);
+    }
+
+    @Test (priority = 16)
+    public void verifySetLocationForItem5() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("calculators");
+        sleepFor(3);
+        searchPage.clickOnSetStore();;
+        sleepFor(4);
+        searchPage.inputStoreLocationNSubmit("Virginia");
+        sleepFor(4);
+    }
+
+    @Test (priority = 17)
+    public void verifyBuyOnlineNPickUpForItem5() throws InterruptedException
+    {
+        pageFactory();
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchPage.clearSearchInputBox();
+        searchPage.typeInSearchInputBoxNSearch("calculators");
+        sleepFor(3);
+        searchPage.clickOnBuyOnlineNPickUp();;
+        sleepFor(4);
+    }
 }
 
 
