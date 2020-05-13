@@ -67,7 +67,7 @@ public class TestingSportsPage extends CommonAPI {
         pageFactoryNTestLogger();
         sleepFor(2);
         sportsPage.clickOnMoreMenuTopBar();
-    }*/
+    }
     @Test
     public void verifyNFLBuffaloLink() throws InterruptedException {
         pageFactoryNTestLogger();

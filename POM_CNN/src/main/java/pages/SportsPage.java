@@ -10,7 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import sun.jvmstat.monitor.event.HostEvent;
 
-public class SportsPage extends CommonAPI{
+public class SportsPage extends CommonAPI {
     //CommonAPI commonAPI= null;
     Homepage homepage= null;
 
