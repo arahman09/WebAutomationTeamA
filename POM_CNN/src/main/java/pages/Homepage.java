@@ -33,10 +33,10 @@ public class Homepage extends CommonAPI
     public static WebElement styleWebElement;
 
     @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(9)")
-    public static WebElement travelWebElement;
+    public  static WebElement travelWebElement;
 
     @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(10)")
-    public static WebElement sportsWebElement;
+    public static  WebElement sportsWebElement;
 
     @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(11)")
     public static WebElement videosWebElement;
@@ -53,17 +53,14 @@ public class Homepage extends CommonAPI
     @FindBy(how = How.CSS, using = ".twitter-icon")
     public static WebElement twitterWebElement;
 
-<<<<<<< HEAD
-    @FindBy(how = How.NAME, using = "travel")
-    public static WebElement travelWebElement;
+   /* @FindBy(how = How.NAME, using = "travel")
+    public  static WebElement travelWebElement;
 
     @FindBy(how = How.NAME, using = "bleacher")
-    public static WebElement sportsWebElement;
+    public static  WebElement sportsWebElement;*/
 
-=======
     @FindBy(how = How.CSS, using = ".instagram-icon")
     public static WebElement instagramWebElement;
->>>>>>> rana
 
     //getWebElement starts here
     public static WebElement getUsWebElement()
@@ -228,14 +225,14 @@ public class Homepage extends CommonAPI
         getInstagramWebElement().click();
     }
 
-    public TravelPage clickOnTravelPage()
+    public TravelPage goToTravelPage()
     {
         testLogger();
         travelWebElement.click();
         return new TravelPage();
     }
 
-    public SportsPage clickOnSportsPage()
+    public SportsPage goToSportsPage()
     {
         testLogger();
         sportsWebElement.click();
@@ -244,9 +241,3 @@ public class Homepage extends CommonAPI
     }
 }
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> rana

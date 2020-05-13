@@ -29,7 +29,7 @@ public class TesingPoliticsPage extends CommonAPI
         politics.clickOnDonaldTrumpPage();
     }
 
-    @Test (priority = 2)
+  /*  @Test (priority = 2)
     public void verifySupremeCourtPage()
     {
         pageFactory();
@@ -76,5 +76,5 @@ public class TesingPoliticsPage extends CommonAPI
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         politics.clickOnHeadLineNews();
     }
-
+*/
 }
