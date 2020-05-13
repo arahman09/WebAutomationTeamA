@@ -37,7 +37,7 @@ public class SearchPage extends CommonAPI
         return searchSubmitButtonWebElement;
     }
 
-    public static void typeOnSeachInputBox(String value)
+    public static void typeOnSearchInputBox(String value)
     {
         getSearchWebElement().sendKeys(value);
     }
@@ -60,7 +60,7 @@ public class SearchPage extends CommonAPI
         for(int i = 0; i < 3; i++)
         {
             clearSearchBox();
-            typeOnSeachInputBox("pen");
+            typeOnSearchInputBox("pen");
             clickOnSubmitButton();
             sleepFor(1);
         }

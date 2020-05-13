@@ -8,13 +8,13 @@ import pages.EntertainmentPage;
 import pages.Homepage;
 import reporting.TestLogger;
 
-public class TestEntertainmentPage extends Homepage {
+public class TestEntertainmentPage extends CommonAPI {
 
     EntertainmentPage entertainmentPage = null;
     Homepage homepage =null;
 
     @Test(priority = 1)
-    public void verifyHeadLineNews() {
+    public void verifyEntertainmentPageHeadLineNews() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homepage = PageFactory.initElements(driver, CnnNews.class);
         entertainmentPage = PageFactory.initElements(driver, EntertainmentPage.class);

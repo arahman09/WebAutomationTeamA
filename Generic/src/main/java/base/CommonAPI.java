@@ -253,7 +253,7 @@ public class CommonAPI {
         }
     }
 
-    public static void typeOnElementNEnter(String locator, String value,WebDriver driver1) {
+    public static void typeOnElementNEnter(String locator, String value, WebDriver driver1) {
         try {
             driver1.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
         } catch (Exception ex1) {
@@ -442,6 +442,7 @@ public class CommonAPI {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
+            hover.perform();
         } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));
@@ -457,6 +458,7 @@ public class CommonAPI {
             WebElement element = driver.findElement(By.xpath(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
+            hover.click();
         } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));

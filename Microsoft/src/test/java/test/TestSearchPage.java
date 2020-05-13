@@ -17,7 +17,7 @@ public class TestSearchPage extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
         driver.findElement(By.xpath("//*[@id=\"search\"]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         List<String> list = Products.getProducts();
         for (int i = 0; i < list.size(); i++) {
             driver.findElement(By.xpath("//*[@id=\"cli_shellHeaderSearchInput\"]")).sendKeys(list.get(i), Keys.ENTER);

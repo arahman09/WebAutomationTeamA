@@ -17,67 +17,67 @@ public class TestHomePage extends CommonAPI {
         System.out.println("Microsoft Web Page Title is: " + driver.getTitle());
     }
     @Test (priority = 2)
-    public void microsoft365Tab() {
+    public void verifyMicrosoft365Tab() {
         homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnMicrosoft365();
     }
     @Test (priority = 3)
-    public void OfficeTab(){
+    public void VerifyOfficeTab(){
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnOffice();
     }
     @Test (priority = 4)
-    public void windowsTab() {
+    public void VerifyWindowsTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnWindows();
     }
     @Test(priority = 5)
-    public void surfaceTab(){
+    public void VerifySurfaceTab(){
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnSurface();
     }
     @Test(priority = 6)
-    public void xboxTab() {
+    public void verifyXboxTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnXbox();
     }
     @Test(priority = 7)
-    public void dealTab() throws InterruptedException {
+    public void VerifyDealTab() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnDeals();
     }
     @Test (priority =8)
-    public void supportTab() {
+    public void VerifySupportTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnSupport();
     }
     @Test (priority = 9)
-    public void allMicrosoftTab() {
+    public void verifyAllMicrosoftTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnAllMicrosoft();
     }
     @Test (priority = 10)
-    public void searchTab() {
+    public void verifySearchTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnSearch();
     }
     @Test (priority = 11)
-    public void cartTab()  {
+    public void verifyCartTab()  {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage= PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnCart();
 
     }
     @Test (priority = 12)
-    public void signInTab() {
+    public void VerifySignInTab() {
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         homePage = PageFactory.initElements(driver,HomePage.class);
         homePage.clickOnSignIn();

@@ -15,8 +15,8 @@
 
         <classes>
 <!--            <class name="test.TestHomePage" />-->
-            <class name="navigation.TestNavigation"/>
-<!--            <class name="test.TestSearchPage"/>-->
+<!--            <class name="navigation.TestNavigation"/>-->
+            <class name="test.TestSearchPage"/>
         </classes>
 
     </test>

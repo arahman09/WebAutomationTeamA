@@ -21,15 +21,15 @@ public class TestCnnNews extends CommonAPI {
         cnnNews.getCnnNewsWebElement();
         cnnNews.clickOnCnnTab();
     }
-    @Test(priority = 2)
-    public void verifyCnnHeadLineNews() {
-        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass()
-                .getEnclosingMethod().getName()));
-        homepage =PageFactory.initElements(driver,Homepage.class);
-        cnnNews = PageFactory.initElements(driver, CnnNews.class);
-        cnnNews.clickOnCnnTab();
-        cnnNews.getHeadLineNewsWebElement();
-        cnnNews.clickOnHeadLineNews();
-    }
+//    @Test(priority = 2)
+//    public void verifyCnnHeadLineNews() {
+//        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass()
+//                .getEnclosingMethod().getName()));
+//        homepage =PageFactory.initElements(driver,Homepage.class);
+//        cnnNews = PageFactory.initElements(driver, CnnNews.class);
+//        cnnNews.clickOnCnnTab();
+//        cnnNews.getHeadLineNewsWebElement();
+//        cnnNews.clickOnHeadLineNews();
+//    }
 }
 
