@@ -18,13 +18,6 @@ public class TestNavigation extends CommonAPI
         landingPage = PageFactory.initElements(driver, LandingPage.class);
     }
 
-//    @Test
-//    public void navigateTabs() throws IOException,InterruptedException
-//    {
-//         NavigateTheTabs navigateTheTabs = PageFactory.initElements(driver, NavigateTheTabs.class);
-//         navigateTheTabs.navigateKeyBars(driver);
-//    }
-
     @Test
     public void verifyProductsTab()
     {

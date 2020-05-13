@@ -1,7 +1,7 @@
 package NavigateTheTabs;
 
 import base.CommonAPI;
-import datasource.ExternalData;
+import datasource.ExeternalData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pages.BrandsPage;
@@ -136,7 +136,7 @@ public class NavigateBrandsTab extends BrandsPage {
             }
         }
         public void navigateBrandsKeyTabs(WebDriver driver) throws IOException, InterruptedException {
-            String [] tabList = ExternalData.getDataFromExcelFile("/data/best-buy-file-sajol.xls");
+            String [] tabList = ExeternalData.getDataFromExcelFile("/data/best-buy-file-sajol.xls");
             for(int i=2; i<tabList.length; i++) {
                 stepsFlow(tabList[i], driver);
             }

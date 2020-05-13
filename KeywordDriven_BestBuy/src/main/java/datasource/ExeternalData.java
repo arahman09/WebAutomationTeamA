@@ -4,7 +4,7 @@ import datasources.ConnectToExcelFile;
 
 import java.io.IOException;
 
-public class ExternalData
+public class ExeternalData
 {
 
     public static String[] getDataFromExcelFile(String givenPath)throws IOException
