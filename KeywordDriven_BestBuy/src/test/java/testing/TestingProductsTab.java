@@ -1,36 +1,31 @@
-package navigation;
+package testing;
 
-import NavigateTheTabs.NavigateTheTabs;
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pages.LandingPage;
+import pages.ProductsTab;
 import reporting.TestLogger;
 
-import java.io.IOException;
-
-public class TestNavigation extends CommonAPI
+public class TestingProductsTab extends CommonAPI
 {
     LandingPage landingPage = null;
+    ProductsTab productsTab = null;
 
     public void pageFactory()
     {
         landingPage = PageFactory.initElements(driver, LandingPage.class);
+        productsTab = PageFactory.initElements(driver, ProductsTab.class);
     }
 
-//    @Test
-//    public void navigateTabs() throws IOException,InterruptedException
-//    {
-//         NavigateTheTabs navigateTheTabs = PageFactory.initElements(driver, NavigateTheTabs.class);
-//         navigateTheTabs.navigateKeyBars(driver);
-//    }
-
     @Test
-    public void verifyProductsTab()
+    public void verifyAppliancesTab() throws InterruptedException
     {
         pageFactory();
         TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         landingPage.clickOnProductsTab();
+        productsTab.clickOnAppliances();
+        sleepFor(5);
     }
 
 }
