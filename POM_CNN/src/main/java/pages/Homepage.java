@@ -4,240 +4,59 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import reporting.TestLogger;
 
-public class Homepage extends CommonAPI
-{
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(1)")
-    public static WebElement usWebElement;
+public class Homepage extends CommonAPI {
 
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(2)")
-    public static WebElement worldWebElement;
-
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(3)")
-    public static WebElement politicsWebElement;
-
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(4)")
+    @FindBy (how = How.XPATH, using = "//*[@id='header-nav-container']/div/div[1]/div/div[2]/nav/ul/li[4]/a")
     public static WebElement businessWebElement;
 
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(5)")
-    public static WebElement opinionWebElement;
-
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(6)")
+    @FindBy(how = How.XPATH, using = "//*[@id='header-nav-container']/div/div[1]/div/div[2]/nav/ul/li[6]/a")
     public static WebElement healthWebElement;
 
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(7)")
+    @FindBy(how = How.XPATH, using = "//*[@id='header-nav-container']/div/div[1]/div/div[2]/nav/ul/li[7]/a")
     public static WebElement entertainmentWebElement;
 
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(8)")
-    public static WebElement styleWebElement;
+    @FindBy(how = How.CSS, using = ".sc-fMiknA > div:nth-child(1) > a")
+    public static WebElement cnnNewsWebElement;
 
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(9)")
-    public  static WebElement travelWebElement;
-
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(10)")
-    public static  WebElement sportsWebElement;
-
-    @FindBy(how = How.CSS, using = ".sc-htoDjs.dpodOf li:nth-child(11)")
-    public static WebElement videosWebElement;
-
-    @FindBy(how = How.CSS, using = "button.sc-jDwBTQ:nth-child(2) > svg")
-    public static WebElement searchWebElement;
-
-    @FindBy(how = How.CSS, using = ".indexes__LiveTVWrap-nujtvs-15 > a:nth-child(1) > span")
-    public static WebElement liveTVWebElement;
-
-    @FindBy(how = How.CSS, using = ".facebook-icon")
-    public static WebElement facebookWebElement;
-
-    @FindBy(how = How.CSS, using = ".twitter-icon")
-    public static WebElement twitterWebElement;
-
-   /* @FindBy(how = How.NAME, using = "travel")
-    public  static WebElement travelWebElement;
-
-    @FindBy(how = How.NAME, using = "bleacher")
-    public static  WebElement sportsWebElement;*/
-
-    @FindBy(how = How.CSS, using = ".instagram-icon")
-    public static WebElement instagramWebElement;
-
-    //getWebElement starts here
-    public static WebElement getUsWebElement()
-    {
-        return usWebElement;
-    }
-
-    public static WebElement getWorldWebElement()
-    {
-        return worldWebElement;
-    }
-
-    public static WebElement getPoliticsWebElement()
-    {
-        return politicsWebElement;
-    }
-
-    public static WebElement getBusinessWebElement()
-    {
+    public WebElement getBusinessWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return businessWebElement;
     }
-
-    public static WebElement getOpinionWebElement()
-    {
-        return opinionWebElement;
-    }
-
-    public static WebElement getHealthWebElement()
-    {
+    public WebElement getHealthWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return healthWebElement;
     }
-
-    public static WebElement getEntertainmentWebElement()
-    {
+    public WebElement getEntertainmentWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return entertainmentWebElement;
     }
 
-    public static WebElement getStyleWebElement()
-    {
-        return styleWebElement;
+    public WebElement getCnnNewsWebElement() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        return cnnNewsWebElement;
     }
 
-    public static WebElement getTravelWebElement()
-    {
-        return travelWebElement;
-    }
-
-    public static WebElement getSportsWebElement()
-    {
-        return sportsWebElement;
-    }
-
-    public static WebElement getVideosWebElement()
-    {
-        return videosWebElement;
-    }
-
-    public static WebElement getSearchWebElement()
-    {
-        return searchWebElement;
-    }
-
-    public static WebElement getLiveTVWebElement()
-    {
-        return liveTVWebElement;
-    }
-
-    public static WebElement getFacebookWebElement()
-    {
-        return facebookWebElement;
-    }
-
-    public static WebElement getTwitterWebElement()
-    {
-        return twitterWebElement;
-    }
-
-    public static WebElement getInstagramWebElement()
-    {
-        return instagramWebElement;
-    }
-    //getWebElement ends here
-
-
-    public void clickOnUSPage()
-    {
-        getUsWebElement().click();
-    }
-
-    public void clickOnWorldPage()
-    {
-        getWorldWebElement().click();
-    }
-
-    public void clickOnPoliticsPage()
-    {
-        getPoliticsWebElement().click();
-    }
-
-    public void clickOnBusinessPage()
-    {
+    public void clickOnBusinessTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getBusinessWebElement().click();
     }
-
-    public void clickOnOpinionPage()
-    {
-        getPoliticsWebElement().click();
-    }
-
-    public void clickOnHealthPage()
-    {
+    public void clickOnHealthTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getHealthWebElement().click();
     }
-
-    public void clickOnEntertainmentPage()
-    {
-        getEntertainmentWebElement().click();
+    public void clickOnEntertainmentTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        getEntertainmentWebElement();
     }
-
-    public void clickOnStylePage()
-    {
-        getStyleWebElement().click();
+    public void clickOnCnnTab() {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        getCnnNewsWebElement().click();
     }
-
-    public void clickOnTravelPage()
-    {
-        getTravelWebElement().click();
-    }
-
-    public void clickOnSportsPage()
-    {
-        getSportsWebElement().click();
-    }
-
-    public void clickOnVideosPage()
-    {
-        getVideosWebElement().click();
-    }
-
-    public void clickOnSearchPage()
-    {
-        getSearchWebElement().click();
-    }
-
-    public void clickOnLiveTvPage()
-    {
-        getLiveTVWebElement().click();
-    }
-
-    public void clickOnFacebookPage()
-    {
-        getFacebookWebElement().click();
-    }
-
-    public void clickOnTwitterPage()
-    {
-        getTwitterWebElement().click();
-    }
-
-    public void clickOnInstagramPage()
-    {
-        getInstagramWebElement().click();
-    }
-
-    public TravelPage goToTravelPage()
-    {
-        testLogger();
-        travelWebElement.click();
-        return new TravelPage();
-    }
-
-    public SportsPage goToSportsPage()
-    {
-        testLogger();
-        sportsWebElement.click();
-        return new SportsPage();
-
+    public void cnnTitle () {
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object()
+        {}.getClass().getEnclosingMethod().getName()));
+        System.out.println(driver.getTitle());
     }
 }
-

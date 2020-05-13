@@ -14,10 +14,9 @@
     <test name = "Staples Home">
 
         <classes>
-            <!--<class name="testing.TestingStaplesHomePage" />-->
-            <!--<class name="testing.TestingReorderMenu" />-->
-            <!--<class name="testing.TestingProductsTab" />-->
-            <class name="testing.TestingStaplesSearchPage" />
+<!--            <class name="testing.TestSearch" />-->
+<!--            <class name="testing.ServicesAndSolutionsTest"/>-->
+            <class name="testing.StaplesHomePageTest"/>
         </classes>
 
     </test>

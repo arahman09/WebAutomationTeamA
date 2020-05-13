@@ -93,8 +93,8 @@ public class CommonAPI {
 
     //Browser SetUp
     public static WebDriver driver = null;
-    public String browserstack_username = "ranamislam1";
-    public String browserstack_accesskey = "xdHwGNpEMGATeh676q9W";
+    public String browserstack_username = "your browser stack user name";
+    public String browserstack_accesskey = "your access key";
     public String saucelabs_username = "your Saucelabs user name";
     public String saucelabs_accesskey = "your access key";
 
@@ -253,7 +253,7 @@ public class CommonAPI {
         }
     }
 
-    public static void typeOnElementNEnter(String locator, String value,WebDriver driver1) {
+    public static void typeOnElementNEnter(String locator, String value, WebDriver driver1) {
         try {
             driver1.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
         } catch (Exception ex1) {
@@ -437,21 +437,17 @@ public class CommonAPI {
         Thread.sleep(sec * 1000);
     }
 
-    public void mouseHoverByCSS(String locator)
-    {
-        try
-        {
+    public void mouseHoverByCSS(String locator) {
+        try {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
-            hover.build().perform(); //added by Rana
-        }
-        catch (Exception ex)
-        {
+            hover.perform();
+        } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
-            action.moveToElement(element).build().perform();
+            action.moveToElement(element).perform();
 
         }
 
@@ -462,8 +458,7 @@ public class CommonAPI {
             WebElement element = driver.findElement(By.xpath(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
-            hover.perform();
-
+            hover.click();
         } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));

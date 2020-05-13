@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class SearchPage extends CommonAPI
 {
-    @FindBy(how = How.CSS, using = "#gh-search-input")
-    public static WebElement searchBarWebElement;
+    @FindBy(how = How.CSS, using = ".search-input")
+    public static WebElement searchWebElement;
 
     @FindBy(how = How.CSS, using = ".header-search-button")
     public static WebElement searchSubmitButtonWebElement;
@@ -26,15 +26,19 @@ public class SearchPage extends CommonAPI
     @FindBy(how = How.CSS, using = ".c-modal-window.email-submission-modal.active")
     public static WebElement windowWebElement;
 
-
-    public static WebElement getSearchBarWebElement()
+    public static WebElement getSearchWebElement()
     {
-        return searchBarWebElement;
+        return searchWebElement;
     }
 
     public static WebElement getSearchSubmitButtonWebElement()
     {
         return searchSubmitButtonWebElement;
+    }
+
+    public static void typeOnSearchInputBox(String value)
+    {
+        getSearchWebElement().sendKeys(value);
     }
 
     public static void clickOnSubmitButton()
@@ -44,32 +48,27 @@ public class SearchPage extends CommonAPI
 
     public void clearSearchBox()
     {
-        getSearchBarWebElement().clear();
-    }
-
-    public static void typeOnSeachInputBox(String items)
-    {
-        getSearchBarWebElement().sendKeys(items);
+        getSearchWebElement().clear();
     }
 
     public void searchNSubmit()throws IOException,InterruptedException
     {
-        //windowWebElement.click();
-        String[] items = getItems();
-        for(int i = 1; i < items.length; i++)
+        //String[] items = getItems();
+        sleepFor(5);
+        windowWebElement.click();
+        for(int i = 0; i < 3; i++)
         {
-            getSearchBarWebElement().click();
-            typeOnSeachInputBox(items[i]);
-            clickOnSubmitButton();
-            sleepFor(2);
             clearSearchBox();
+            typeOnSearchInputBox("pen");
+            clickOnSubmitButton();
+            sleepFor(1);
         }
 
     }
 
     public static String[] getItems()throws IOException
     {
-        String[] items = DataSource.getDataFromExcelFile("/data/Evan_Data_BestBuy.xls");
+        String[] items = DataSource.getDataFromExcelFile("/data/BestBuy_products.xls");
         return items;
     }
 
